@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'Barlow', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Barlow', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Barlow', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap') format('opentype');
+    font-weight: regular;
+    font-style: normal;
+  }
+  
+  /* Example Usage */
+  body {
+    font-family: 'Barlow', sans-serif;
+  }
+  
+  h1 {
+    font-family: 'Barlow', sans-serif;
+    font-weight: bold;
+  }
+  
