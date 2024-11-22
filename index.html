@@ -1,13 +1,754 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="hero min-vh-100 w-100 position-relative">
+        <nav class="d-flex align-items-center justify-content-between px-md-5 py-md-4 px-3 py-4 w-100">
+            <div class="d-flex align-items-center gap-3">
+                <img src="assets/Images/navlogo.png" alt="Logo" class="logo" />
+                
+                <img src="assets/Images/FORGE Labs3.png" alt="Logo" class="logo2" />
+               
+            </div>
+            <ul class="nav-menus d-flex align-items-center gap-3">
+                <li><a class="nav-link active" href="#technical_infrastructure"><span
+                            class="opacity-75">TECHNICAL</span> INFRASTRUCTURE</a></li>
+                <li><a class="nav-link" href="#acceleration"><span class="opacity-75">PRODUCT</span> ACCELERATION</a>
+                </li>
+                <li><button class="btn btn-orange">Contact</button></li>
+            </ul>
+            <div class="hamburger-menu">
+                ☰ <!-- Replace with your preferred hamburger icon -->
+            </div>
+            <div class="mobile-menu hide">
+                <ul class="d-flex flex-column gap-3">
+                    <li><a class="nav-link active" href="#technical_infrastructure"> <span
+                                class="text-black">TECHNICAL</span> INFRASTRUCTURE</a>
+                    </li>
+                    <li><a class="nav-link" href="#acceleration"><span class="nav-opacity">PRODUCT</span>
+                            ACCELERATION</a></li>
+                    <li><button class="btn btn-orange">Contact</button></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="overlay-black-linear-gradient"></div>
+        <div
+            class="d-flex flex-column gap-3 align-items-center justify-content-center hero-content text-center md:p-2 p-3">
+            <h1 class="hero-head text-uppercase">
+                Industrial Innovation Studios for Accelerated Product Development
+            </h1>
+            <p class="hero-desc">
+                Developing, Advancing, Applying Discoveries and Breakthroughs To Drive
+                Innovation-Catalysed, Enduring Competitive Advantages
+            </p>
+        </div>
+    </div>
+    <section class="banner py-5 w-100">
+        <div class="row w-100 align-items-center">
+            <!-- Headline -->
+            <div class="col-12 col-md-4 text-center d-flex text-md-start align-items-start">
+                <img src="assets/Images/FORGE Labs Orange.png" alt="Logo" class="logo2" />
+            </div>
+            <!-- Description -->
+            <div class="col-12 col-md-8">
+                <p class="text-md-start text-black">
+                    The aggregate of Forge.Labs’ technology infrastructure & resources offers tools, resources, and
+                    expertise to translate innovative ideas across the defence, manufacturing, precision health,
+                    climate mitigation, mobility & sustainability domains into factory-scale industrial-grade
+                    solutions - faster, better, and cheaper, by driving accelerated product development through
+                    infrastructure across the entire product innovation-compliance-certification-pilot production
+                    lifecycle.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner-2 position-relative py-5">
+        <!-- Overlay -->
+        <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+        <!-- Content -->
+        <div class="container position-relative">
+            <div class="row align-items-start align-items-md-center">
+                <!-- Image Section -->
+                <div class="col-12 col-md-4 text-center mb-4 mb-md-0">
+                    <img src="assets/Images/India's Largest Fab Lab Network1.png" alt="Fab Lab Network"
+                        class="img-fluid" />
+                </div>
+
+                <!-- Text Section -->
+                <div class="col-12 col-md-8">
+                    <p class="text-white text-center text-md-start">
+                        Forge operates a Network of Industrial Innovation Labs spanning 7 different cities of Tamil
+                        Nadu, which constitutes the largest network of Fab Labs accredited by the Fab Foundation, USA -
+                        that deliver India’s ONLY university-accredited Innovation Practicum. These Industrial
+                        Innovation Labs have state-of-the-art lab facilities equipped with advanced digital fabrication
+                        tools such as 3D printers, laser cutters, CNC machines, and electronics prototyping equipment
+                        with the primary objective to democratise access to manufacturing technologies across students,
+                        innovators, startups, and industrial companies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="tab-1 py-5">
+        <!-- Header -->
+        <div class="text-center mb-4">
+            <h2 class="head">
+                Forge’s Network of <br /> Industrial Innovation Labs
+            </h2>
+        </div>
+
+        <!-- Tabs -->
+        <ul class="nav nav-tabs justify-content-center gap-md-5 gap-sm-4 gap-3 mb-4 border-0" id="myTab1"
+            role="tablist">
+            <!-- Tab 1 -->
+            <li class="nav-item" role="presentation">
+                <button class="nav-link tab1" type="button" role="tab" onclick="handleTabChange(0,1)">
+                    <img id="forgeLogo" src="assets/Images/FORGE Logo (2) (1).png" alt="Forge Logo" class="img-fluid" />
+                </button>
+            </li>
+            <!-- Tab 2 -->
+            <li class="nav-item" role="presentation">
+                <button class="nav-link tab1" type="button" role="tab" onclick="handleTabChange(1,1)">
+                    <img id="fortLogo" src="assets/Images/FORT Logo.png" alt="Fort Logo" class="img-fluid" />
+                </button>
+            </li>
+            <!-- Tab 3 -->
+            <li class="nav-item" role="presentation">
+                <button class="nav-link tab1" type="button" role="tab" onclick="handleTabChange(2,1)">
+                    <img id="innoLogo" src="assets/Images/InnovateTN Logo (2) (1).png" alt="InnovateTN Logo"
+                        class="img-fluid" />
+                </button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content mt-4" id="myTabContent">
+            <!-- Tab 1 Content -->
+            <div class="tab-pane tab-pane1 fade show active" id="tab1-content1">
+                <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-6">
+                        <h3 class="head">HWjunction @ HQ, Forge</h3>
+                        <p>
+                            Housed at Forge.Factory - Forge’s headquarters in Coimbatore, TN’s foremost industrial hub,
+                            the HWjunction is an MIT Accredited Digital Fabrication Lab offering digital manufacturing
+                            technology through industrial-grade fabrication and flexible computer-controlled tools.
+                        </p>
+                        <button class="btn btn-primary">Get In Touch</button>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <img src="assets/Images/Forge Map1.png" alt="Forge Factory" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 2 Content -->
+            <div class="tab-pane tab-pane1 fade" id="tab1-content2">
+                <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-6">
+                        <h3 class="head">Force of Rapid Transformation - SIPCOT Industrial Innovation Centres</h3>
+                        <p>
+                            The FORTs (Force of Rapid Transformation) serve as world-class Open Industrial Innovation
+                            Ecosystems, offering comprehensive deep technical infrastructure, services, and resources to
+                            seed, nurture, and accelerate the development of technologically advanced innovations into
+                            industrial-grade solutions ready for deployment at scale.
+                        </p>
+                        <button class="btn btn-primary">Get In Touch</button>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <img src="assets/Images/FORT Map1.png" alt="Fort Map" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 3 Content -->
+            <div class="tab-pane tab-pane1 fade" id="tab1-content3">
+                <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-6">
+                        <h3 class="head">InnovateTN</h3>
+                        <p>
+                            The InnovateTN labs across 4 cities in TN operate as self-contained Integrated Industrial
+                            Innovation Labs, creating a robust innovation ecosystem in and around these industrial hubs
+                            by leveraging an Open Innovation Model for government, MSMEs, technology providers,
+                            academia, R&D, innovators & startup entrepreneurs, investors, and incubators to collaborate
+                            and co-create industry-oriented cutting-edge technology solutions.
+                        </p>
+                        <button class="btn btn-primary">Get In Touch</button>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <img src="assets/Images/InnovateTN Map1.png" alt="InnovateTN Map" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="impact d-flex flex-column gap-3 align-items-end w-100">
+        <div class="head">Program Impact</div>
+        <div class="swiper-container swiper-container-1 w-100 overflow-hidden">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="assets/Images/Screenshot 2024-10-18 at 3.12.54 PM.png" alt="Impact Slide"
+                        class="impact-image">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/Images/Screenshot 2024-10-18 at 3.12.54 PM.png" alt="Impact Slide"
+                        class="impact-image">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/Images/Screenshot 2024-10-18 at 3.12.54 PM.png" alt="Impact Slide"
+                        class="impact-image">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/Images/Screenshot 2024-10-18 at 3.12.54 PM.png" alt="Impact Slide"
+                        class="impact-image">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/Images/Screenshot 2024-10-18 at 3.12.54 PM.png" alt="Impact Slide"
+                        class="impact-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners py-5">
+        <!-- Section Header -->
+        <div class="text-center mb-5">
+            <h2 class="head">Partners</h2>
+        </div>
+
+        <!-- Government Section -->
+        <div class="mb-5">
+            <div class="d-flex align-items-center gap-3">
+                <span class="fw-bold">Government</span>
+                <div class="hr flex-grow-1 bg-dark" style="height: 2px;"></div>
+            </div>
+            <div class="mt-3">
+                <img src="assets/Images/Government.png" alt="Government Partner" class="img-fluid w-100">
+            </div>
+        </div>
+
+
+        <!-- Industry Section -->
+        <div>
+            <div class="d-flex align-items-center gap-3">
+                <span class="fw-bold">Industry</span>
+                <div class="hr flex-grow-1 bg-dark" style="height: 2px;"></div>
+            </div>
+            <div class="mt-3">
+                <img src="assets/Images/Technology.png" alt="Industry Partner" class="img-fluid w-100">
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="technology d-flex flex-column gap-2 mx-2 my-4 rounded-4" id="technical_infrastructure">
+        <div class="overlay z-0 rounded-4"></div>
+        <div class="content z-1">
+            <div class="head d-flex flex-column align-items-center justify-content-center gap-0">
+                <span>TECHNOLOGY</span>
+                <span class="text-white" style="margin-top: -15px;">INFRASTRUCTURE</span>
+                </span>
+            </div>
+            <p class="w-md-75 w-100 mx-auto text-left mt-2">
+                Forge’s Technical Infrastructure includes the various machinery, equipment, and tools to help innovators
+                design, build, test, and manufacture industrial tech solutions. This comprehensive infrastructure setup
+                comprises 3 labs including Product Innovation Labs, Product Compliance Labs, and Pilot Production
+                Facilities.
+            </p>
+            <div class="tab-2 d-flex flex-column align-items-center justify-content-between gap-4 mt-5">
+                <ul class="nav nav-tabs border-0 justify-content-center gap-md-5 gap-3 fw-bold" id="myTab2"
+                    role="tablist">
+                    <!-- Tab 1 -->
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link tab2" id="product-innovation" data-bs-toggle="tab"
+                            data-bs-target="#product-innovation-pane" type="button" role="tab"
+                            aria-controls="product-innovation-pane" aria-selected="true" onclick="handleTabChange(0,2)">
+                            PRODUCT <br /> INNOVATION LABS
+                        </button>
+                    </li>
+                    <!-- Tab 2 -->
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link tab2" id="product-compliance" data-bs-toggle="tab"
+                            data-bs-target="#product-compliance-pane" type="button" role="tab"
+                            aria-controls="product-compliance-pane" aria-selected="false"
+                            onclick="handleTabChange(1,2)">
+                            PRODUCT <br /> COMPLIANCE LABS
+                        </button>
+                    </li>
+                    <!-- Tab 3 -->
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link tab2" id="pilot-production" data-bs-toggle="tab"
+                            data-bs-target="#pilot-production-pane" type="button" role="tab"
+                            aria-controls="pilot-production-pane" aria-selected="false" onclick="handleTabChange(2,2)">
+                            PILOT <br /> PRODUCTION FACILITIES
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content mt-4" id="myTabContent">
+                    <!-- Content for Tab 1 -->
+                    <div class="tab-pane tab-pane2 fade" id="product-innovation-pane" role="tabpanel"
+                        aria-labelledby="product-innovation-tab" tabindex="0">
+                        <div class="d-flex flex-column align-items-center gap-2 w-100">
+                            <div class="head text-uppercase d-flex flex-column align-items-center w-100 text-center">
+                                <h2 class="fw-bold mb-0">Product innovation labs</h2>
+                                <span class="fw-normal">Product Design & Development</span>
+                            </div>
+                            <p class="text-left w-md-75 w-100">
+                                Product Innovation Labs help startups, industrial companies, and student innovators with
+                                product
+                                design & development of industrial solutions. The Product Innovation Labs comprise of
+                                machineries
+                                & equipments in the following 8 Industrial Technology Domains:
+                            </p>
+                            <div class="swiper-container  w-100 position-relative  overflow-hidden">
+                                <!-- Navigation Buttons -->
+                                <button
+                                    class="swiper-button-prev swiper-button-prev-2 position-absolute top-50 start-0 translate-middle-y text-white border-0 bg-transparent"
+                                    style="left: -30px; z-index: 10">
+                                </button>
+                                <button
+                                    class="swiper-button-next swiper-button-next-2 position-absolute top-50 end-0 translate-middle-y text-white border-0 bg-transparent"
+                                    style="right: -30px; z-index: 10">
+                                </button>
+
+                                <!-- Swiper Component -->
+                                <div class="swiper-container swiper-container-2 overlow-hidden">
+                                    <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                        <div class="swiper-slide p-5">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <img src="assets/Images/Industrial Robotics & Cobotics.gif" alt=""
+                                                    width="155">
+                                                <h4 class="text-yellow text-left">INDUSTRIAL ROBOTICS & COBOTICS
+                                                </h4>
+                                                <p class="text-left">6-Axis Multifunctional Industrial Robot, Robotic Controllers, Robotic Design & Build Tools
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide p-5">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <img src="assets/Images/Electronics Design Test & Verification.gif"
+                                                    alt="" width="155">
+                                                <h4 class="text-yellow text-left">ELECTRONICS DESIGN, TEST &
+                                                    VERIFICATION
+                                                </h4>
+                                                <p class="text-left">Multifunctional & Mixed-Signal Oscilloscopes, Function/Signal Generator Network/Spectrum Analysers, Industrial Grade Simulators
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide p-5">
+                                            <div class="d-flex flex-column align-items-left">
+                                                <img src="assets/Images/Industrial Design & Fabrication1.gif"
+                                                    alt="" width="155">
+                                                <h4 class="text-yellow text-left">INDUSTRIAL DESIGN & FABRICATION
+                                                </h4>
+                                                <p class="text-left">Machining Workbench Tools, Power Tools & Laser Cutters Advanced CAD/CAM/CAE Design & Simulation Tools</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide p-5">
+                                            <div class="d-flex flex-column align-items-left">
+                                                <img src="assets/Images/Accelerated Computing Systems.gif" alt=""
+                                                    width="155">
+                                                <h4 class="text-yellow text-left">ACCELERATED COMPUTING SYSTEMS
+                                                </h4>
+                                                <p class="text-left">Edge IoT & Edge AI Processors and Advanced Workstations</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide p-5">
+                                            <div class="d-flex flex-column align-items-left">
+                                                <img src="assets/Images/Cyber Physical Control System.gif" alt=""
+                                                    width="155">
+                                                <h4 class="text-yellow text-left">CYBER PHYSICAL CONTROL SYSTEMS
+                                                </h4>
+                                                <p class="text-left">Vision Intelligence Systems, Drives & Actuators for Automation & Mechatronics, and HMI & PLC Systems</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide p-5">
+                                            <div class="d-flex flex-column align-items-left">
+                                                <img src="assets/Images/Additive Manufacturing.gif" alt="" width="155">
+                                                <h4 class="text-yellow text-left">ADDITIVE MANUFACTORING</h4>
+                                                <p>Industrial-Grade Multi-material 3D Printers and 3D Scanners</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide p-5">
+                                            <div class="d-flex flex-column align-items-left">
+                                                <img src="assets/Images/Electronics Rapid Prototyping.gif" alt=""
+                                                    width="155">
+                                                <h4 class="text-yellow text-left">ELECTRONICS RAPID PROTOTYPING
+                                                </h4>
+                                                <p>PCB Assembly & Testing Station, PCB Design Software, and Electronics Prototyping Toolkits</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide p-5">
+                                            <div class="d-flex flex-column align-items-left">
+                                                <img src="assets/Images/Industrial Metaverse.gif" alt="" width="155">
+                                                <h4 class="text-yellow text-left">INDUSTRIAL METAVERSE
+                                                </h4>
+                                                <p class="text-left">VR/MR Headsets, CAD/CAM to AR/VR Translation  Softwares Metaverse SDKs, and 3D Visualisation Softwares</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content for Tab 2 -->
+                    <div class="tab-pane tab-pane2 fade" id="product-compliance-pane" role="tabpanel"
+                        aria-labelledby="product-compliance-tab" tabindex="0">
+                        <div class="d-flex flex-column align-items-center gap-2 w-100">
+                            <div class="head text-uppercase d-flex flex-column align-items-center w-100 text-center">
+                                <h2 class="fw-bold mb-0">Product Compliance Labs
+                                </h2>
+                                <span class="fw-normal">Product Verification, Validation & Pre-Certification
+
+                                </span>
+                            </div>
+                            <p class="text-left px-md-5 w-md-75 w-100">
+                                Product Compliance Lab provides the necessary resources and services to verify,
+                                validate, and pre-certify products, ensuring they meet regulatory & industry standards.
+                                By facilitating rigorous testing and compliance checks, the lab helps innovators and
+                                startups navigate the complex approval processes efficiently, reducing time to market
+                                and mitigating risks associated with non-compliance.
+
+
+                            </p>
+
+                            <div class="row w-100 justify-content-between">
+                                <div class="col-12 col-md-3 d-flex flex-column align-items-start mb-4">
+                                    <img src="assets/Images/Mechanical Compliance.gif" alt="Automation & Robotics"
+                                        class="img-fluid" width="155">
+                                    <h4 class="text-yellow text-left">Mechanical Compliance</h4>
+                                    <p class="text-left ">Vibration Testing, Sound Level Testing, Coating Thickness Measurement, Dimensional Measurements, Flaw Detection, Ingress Protection Test Chambers, and Coordinate Measurement Machines</p>
+                                </div>
+                                <div class="col-12 col-md-3 d-flex flex-column align-items-start mb-4">
+                                    <img src="assets/Images/Electronics Compliance1.gif" alt="Automation & Robotics"
+                                        class="img-fluid" width="155">
+                                    <h4 class="text-yellow text-left ">Electronics Compliance</h4>
+                                    <p class="text-left">Flying Probe Testing and EMC/EMI Testing & Compliance</p>
+                                </div>
+                                <div class="col-12 col-md-3 d-flex flex-column align-items-start mb-4">
+                                    <img src="assets/Images/Electrical Compliance1.gif" alt="Automation & Robotics"
+                                        class="img-fluid" width="155">
+                                    <h4 class="text-yellow text-left">Electrical Compliance</h4>
+                                    <p class="text-left">ESG Testing, Hipot Testing, Earth Testing, Current Leakage Testing, Harmonic Analysis, Battery Testing, and Motor Analysis</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content for Tab 3 -->
+                    <div class="tab-pane tab-pane2 fade" id="pilot-production-pane" role="tabpanel"
+                        aria-labelledby="pilot-production-tab" tabindex="0">
+                        <div class="d-flex flex-column align-items-center gap-2 w-100">
+                            <div class="head text-uppercase d-flex flex-column align-items-center w-100 text-center">
+                                <h2 class="fw-bold mb-0">Pilot Production Facilities
+                                </h2>
+                                <span class="fw-normal">Low Volume Production of Hardware Products & Industrial Systems
+                                </span>
+                            </div>
+                            <p class="text-left px-md-5 w-md-75 w-100">
+                                Pilot Production Facilities offer plug & play manufacturing setups tailored for startups
+                                and MSMEs working on new product innovations. They bridge the gap between prototyping
+                                and large-scale manufacturing, enabling startups to transform into the next generation
+                                of industrial tech majors by offering them pilot-scale manufacturing infrastructure &
+                                capabilities that drive production while these startups navigate the market stage, to
+                                arrive at a Minimum Viable Product, and optimise unit economics & Product-Factory Fit.
+
+
+                            </p>
+                            <div class="d-flex col-12 px-5 align-items-center justify-content-between">
+                                <div class="d-flex flex-column align-items-left justify-content-start col-md-5">
+                                    <img src="assets/Images/Electronics Manufacturing.gif" alt="Electronics Manufacturing"
+                                        width="155">
+                                    <h4 class="text-yellow text-left">Electronics Manufacturing</h4>
+                                    <p class="text-left">PCB Design, Fabrication & Assembly</p>
+                                </div>
+                                <div class="d-flex flex-column align-items-left justify-content-start col-md-5">
+                                    <img src="assets/Images/Mechanical Fabrication.gif"
+                                        alt="Electronics Manufacturing" width="155">
+                                    <h4 class="text-yellow text-left">Mechanical Fabrication</h4>
+                                    <p class="text-left">Covering both additive and subtractive manufacturing
+                                        processes, the facilities include Vertical Milling Centres, MIG, TIG,
+                                        and Arc welding machines, sheet metal cutting machines, turning
+                                        machines, vacuum casting, and dough moulding</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="technology acceleration d-flex flex-column gap-2 mx-2 my-4 rounded-4" id="acceleration">
+        <div class="overlay z-0 rounded-4"></div>
+        <div class="content z-1">
+            <div class="head">
+                <span
+                    class="text-white d-flex flex-column align-items-center justify-content-center gap-0"><span>PRODUCT</span>
+                    <span style="margin-top: -15px;">ACCELERATION</span></span>
+            </div>
+            <p class="mx-auto text-left head-p">
+                Supplementing its world-class technical infrastructure, Forge.Labs also provides the requisite
+                processes, tools, techniques, and technical expertise applied in product development to help
+                innovators build industry-grade products that achieve Product-Market Fit in the shortest time, at
+                the lowest cost, and with minimal risk.
+            </p>
+            <div class="tab-2 tab-3 d-flex flex-column align-items-center justify-content-center gap-4">
+                <!-- Tabs Navigation -->
+                <ul class="nav nav-tabs border-0 justify-content-center gap-3 gap-md-5 fw-bold" id="myTab"
+                    role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link tab3" id="product-advisory" type="button" role="tab"
+                            aria-controls="product-advisory-pane" aria-selected="true" onclick="handleTabChange(0,3)">
+                            PRODUCT ADVISORY
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link tab3" id="product-development" type="button" role="tab"
+                            aria-controls="product-development-pane" aria-selected="false"
+                            onclick="handleTabChange(1,3)">
+                            PRODUCT DEVELOPMENT
+                        </button>
+                    </li>
+                </ul>
+
+                <!-- Tabs Content -->
+
+
+
+                <div class="tab-content mt-4" id="myTabContent">
+                    <!-- Tab 1 Content -->
+                    <div class="tab-pane tab-pane3 fade show active" id="product-advisory-pane" role="tabpanel"
+                        aria-labelledby="product-advisory">
+                        <div class="d-flex flex-column align-items-center gap-4 w-100 px-md-3">
+                            <div class="text-center">
+                                <h3 class="text-uppercase d-block text-dark-orange fw-bold">PRODUCT ADVISORY</h3>
+                                <h3>Startup Product Management (SPM) Practices to Accelerate Product Market Fit (PMF)
+                                </h3>
+                            </div>
+                            <p class="text-left">
+                                Product Innovations come with inherent risks, relating to problem definition, problem
+                                significance, customer selection & specificity, customer motivation to solve the
+                                problem,
+                                acceptance of the Value Proposition by the target customer, among others. Validating
+                                these risks is crucial for startups to reduce the likelihood of the product failing in
+                                the market.
+                                <br>
+                                <br>
+                                Forge's Startup Product Management (SPM) helps startups with a structured approach to
+                                validate these inherent risks by linking their progress to customer acceptance and
+                                customer commitment, thereby building a product that customers are willing to buy & use.
+                                SPM essentially helps startups in Defining the Right PRODUCT, Building the Right
+                                PRODUCT, and Building the Product RIGHT.
+                            </p>
+                            <div class="swiper-container  w-100 position-relative">
+                                <div
+                                    class="swiper-button-prev swiper-button-prev-3 position-absolute top-50 start-0 translate-middle-y text-white border-0 bg-transparent">
+                                </div>
+                                <div
+                                    class="swiper-button-next swiper-button-next-3 position-absolute top-50 end-0 translate-middle-y text-white border-0 bg-transparent">
+                                </div>
+                                <div class="swiper swiper-container-3 swiper-3">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="row w-100 align-items-center">
+                                                <div class="col-12 col-md-6 col-xl-4 d-flex justify-content-center">
+                                                    <img src="assets/Images/Defining the Right PRODUCT.gif"
+                                                        class="img-fluid" style="max-width: 300px" />
+                                                </div>
+                                                <div class="col-12 col-md-6 d-flex flex-column gap-3 content-container">
+                                                    <h1 class="text-white">Defining the Right PRODUCT</h1>
+                                                    <p>
+                                                        Defining the Right PRODUCT is essentially about defining the
+                                                        Right Problem/Need,
+                                                        identifying the Right Customer, and offering the Right Value
+                                                        Proposition. This ensures
+                                                        that the right product is built downstream, enabling seamless
+                                                        adoption by customers.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="row w-100 align-items-center">
+                                                <div class="col-12 col-md-6 col-xl-4 d-flex justify-content-center">
+                                                    <img src="assets/Images/Building the Right PRODUCT.gif"
+                                                        class="img-fluid" style="max-width: 300px" />
+                                                </div>
+                                                <div class="col-12 col-md-6 d-flex flex-column gap-3 content-container">
+                                                    <h1 class="text-white">Building the Right PRODUCT</h1>
+                                                    <p>
+                                                        Building the Right PRODUCT is all about building a product that
+                                                        most efficiently solves
+                                                        the problem while effectively delivering the value proposition.
+                                                        The Right PRODUCT is
+                                                        the one with the Right Utility (Features & Functions), Right
+                                                        Usability (UX, Integration &
+                                                        Operations), and Right Quality (Performance, Reliability &
+                                                        Standards).
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="row w-100 align-items-center">
+                                                <div class="col-12 col-md-6 col-xl-4 d-flex justify-content-center">
+                                                    <img src="assets/Images/Building the Product Right.gif"
+                                                        class="img-fluid" style="max-width: 300px" />
+                                                </div>
+                                                <div class="col-12 col-md-6 d-flex flex-column gap-3 content-container">
+                                                    <h1 class="text-white">Building the Product RIGHT</h1>
+                                                    <p>
+                                                        Building the Product RIGHT focuses on building the product by applying best practices in design and engineering for industrial-grade solutions. This includes timely integration, trials, and certification to minimise technical debt and prevent costly failures. This also ensures that the product is designed for manufacturability at industrial standards of scale, and reliability while ensuring easy extensibility, upgrades, and maintenance in line with industrial standards.
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 2 Content -->
+                    <div class="tab-pane tab-pane3 fade" id="product-development-pane" role="tabpanel"
+                        aria-labelledby="product-development">
+                        <div class="d-flex flex-column align-items-center gap-4 w-100 px-3">
+                            <div class="text-center">
+                                <h3 class="text-uppercase d-block text-dark-orange fw-bold">PRODUCT DEVELOPMENT SUPPORT</h3>
+                                <h3 class="text-white">Accelerating the Translation of Industrial Tech IPs into
+                                    Commercial
+                                    Products</h3>
+                            </div>
+                            <p class="text-left">
+                                Forge offers a comprehensive range of services to support innovators and startups
+                                throughout their product development journey. In addition to providing expert guidance
+                                on
+                                product management practices, Forge also offers:
+                            </p>
+                            <div class="row w-100 d-flex align-items-start justify-content-between">
+                                <div class="col-12 col-md-3 d-flex flex-column align-items-start mb-4">
+                                    <img src="assets/Images/Innovation Grants.gif" class="img-fluid" width="155" />
+                                    <h4 class="text-yellow mt-3 text-left">Innovation Grants</h4>
+                                    <p class="text-left">
+                                        Enabling prototypes to mature into market-ready solutions.
+                                    </p>
+                                </div>
+                                <div class="col-12 col-md-3 d-flex flex-column align-items-start mb-4">
+                                    <img src="assets/Images/Human Resource Augmentation.gif" class="img-fluid"
+                                        width="155" />
+                                    <h4 class="text-yellow mt-3 text-left">Techno-Managerial Expertise</h4>
+                                    <p class="text-left">
+                                        Access to in-house and external experts offering techno-managerial expertise.
+                                    </p>
+                                </div>
+                                <div class="col-12 col-md-3 d-flex flex-column align-items-start mb-4">
+                                    <img src="assets/Images/Techno-Managerial Expertise.gif" class="img-fluid"
+                                        width="155" />
+                                    <h4 class="text-yellow mt-3 text-left">Human Resource Augmentation</h4>
+                                    <p class="text-left">
+                                        Scaling up product development capacity by augmenting additional resources.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <section class="footer w-100 text-white py-4 px-5">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <!-- Footer Logo and Copyright -->
+                <div class="col-12 col-md-3 mb-4">
+                    <div class="footer-logo mb-3">
+                        <img src="assets/Images/Forge Logo White (2).png" alt="Forge Logo" />
+                    </div>
+                    <span>
+                        © 2024 Forge Innovation Ventures.
+                        <br />
+                        All rights reserved.
+                    </span>
+                </div>
+
+                <!-- Get in Touch Section -->
+                <div class="col-12 col-md-3 mb-4">
+                    <span class="footer-head d-block mb-2">Get In Touch</span>
+                    <span>
+                        Forge.Factory, G Floor, KCT Tech Park,
+                        <br />
+                        #3 Athipalayam Road, Chinnavedampatti,
+                        <br />
+                        Coimbatore 641049
+                    </span>
+                    <br />
+                    <span>
+                        info@forge-iv.co <br />
+                        +91 94433 54312
+                    </span>
+                </div>
+
+                <!-- Quick Links Section -->
+                <div class="col-12 col-md-3 mb-4">
+                    <span class="footer-head d-block mb-2">Quick Links</span>
+                    <div>
+                        <span class="d-block">About FORGE</span>
+                        <span class="d-block">Disclaimer</span>
+                        <span class="d-block">Privacy Policy</span>
+                        <span class="d-block">Terms and Conditions</span>
+                    </div>
+                </div>
+
+                <!-- Join Our Email List Section -->
+                <div class="col-12 col-md-3 mb-4">
+                    <span class="footer-head d-block mb-2">Join Our Email List</span>
+                    <p>Subscribe to our newsletter to get our news and details delivered to you</p>
+                    <div class="d-flex footer-input-container">
+                        <input type="email" class="form-control me-2" placeholder="Enter your email address" />
+                        <button class="btn btn-orange">Join</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="scripts.js"></script>
+
+</body>
+
 </html>
